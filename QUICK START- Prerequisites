@@ -1,0 +1,10 @@
+# System Requirements
+Python 3.9+
+8+ CPU cores
+32GB+ RAM
+NVIDIA GPU with CUDA support (recommended)
+100GB+ storage
+
+# Quantum Simulator Requirements (optional)
+Qiskit or Cirq for quantum simulation
+Quantum memory: 16GB+ for meaningful simulations
