@@ -1,0 +1,36 @@
+# k8s/sg-qnsf-universal.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sg-qnsf-universal
+  labels:
+    app: quantum-neuromorphic-fabric
+    version: "2.0.0"
+    author: "Nicolas E. Santiago"
+    location: "Saitama, Japan"
+    date: "2025-11-09"
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: quantum-neuromorphic-fabric
+  template:
+    metadata:
+      labels:
+        app: quantum-neuromorphic-fabric
+        version: "2.0.0"
+        watermark: "SAFEWAY_GUARDIAN"
+    spec:
+      containers:
+      - name: quantum-core
+        image: sg-qnsf/quantum-core:2.0.0
+        resources:
+          limits:
+            nvidia.com/gpu: 2
+            memory: "64Gi"
+            cpu: "16"
+        env:
+        - name: DEEPSEEK_AI_TECHNOLOGY
+          value: "enabled"
+        - name: PROJECT_WATERMARK
+          value: "SG-QNSF_v2.0_2025-11-09_Nicolas_Santiago_Saitama_Japan"
