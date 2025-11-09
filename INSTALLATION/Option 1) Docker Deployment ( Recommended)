@@ -1,0 +1,13 @@
+# Clone repository
+git clone https://github.com/nicolas-santiago/sg-qnsf-v2.0.git
+cd sg-qnsf-v2.0
+
+# Create environment configuration
+cp .env.example .env
+# Edit .env with your configuration
+
+# Start all services
+docker-compose -f docker/compose/universal.yml up -d
+
+# Verify system status
+docker exec -it sg-qnsf-orchestrator python scripts/health_check.py
