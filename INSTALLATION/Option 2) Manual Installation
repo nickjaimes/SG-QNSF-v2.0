@@ -1,0 +1,16 @@
+# Clone repository
+git clone https://github.com/nicolas-santiago/sg-qnsf-v2.0.git
+cd sg-qnsf-v2.0
+
+# Create virtual environment
+python -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate
+
+# Install dependencies
+pip install -e ".[quantum,neuromorphic,all-domains]"
+
+# Initialize system
+python scripts/initialize_system.py
+
+# Start core services
+python start_services.py --fabric full
