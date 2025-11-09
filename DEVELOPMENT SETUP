@@ -1,0 +1,16 @@
+# Clone repository
+git clone https://github.com/nicolas-santiago/sg-qnsf-v2.0.git
+cd sg-qnsf-v2.0
+
+# Set up development environment
+python -m venv venv
+source venv/bin/activate
+
+# Install development dependencies
+pip install -e ".[dev,test,docs,quantum,neuromorphic]"
+
+# Run tests
+pytest tests/ -v
+
+# Build documentation
+cd docs && make html
