@@ -1,0 +1,8 @@
+from sg_qnsf.applications import SpaceColonizationAI
+
+space_ai = SpaceColonizationAI()
+mission_plan = await space_ai.plan_interplanetary_expansion(
+    solar_system_data=planetary_resources,
+    colonization_targets=['mars', 'europa', 'titan'],
+    timeline='50_years'
+)
