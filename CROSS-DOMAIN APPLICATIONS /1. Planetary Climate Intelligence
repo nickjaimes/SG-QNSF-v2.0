@@ -1,0 +1,8 @@
+from sg_qnsf.applications import ClimateIntelligence
+
+climate_ai = ClimateIntelligence()
+predictions = await climate_ai.analyze_planetary_climate(
+    earth_data=earth_observation_streams,
+    time_horizon='50_years',
+    intervention_planning=True
+)
