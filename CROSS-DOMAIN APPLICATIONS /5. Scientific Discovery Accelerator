@@ -1,0 +1,8 @@
+from sg_qnsf.applications import ScientificDiscoveryAI
+
+science_ai = ScientificDiscoveryAI()
+breakthroughs = await science_ai.accelerate_research(
+    research_domains=['quantum_physics', 'synthetic_biology', 'nanotechnology'],
+    hypothesis_generation=True,
+    experimental_design=True
+)
